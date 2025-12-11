@@ -14,17 +14,17 @@ class Node {
 class Solution {
     public Node reverse(Node head) {
         // code here
-       Node temp = head;
-        
-        while(temp != null){
-            Node prev = temp.prev;
-            temp.prev = temp.next;
-            temp.next = prev;
-            
-            if(temp.prev == null) return temp;
-            temp = temp.prev;
-        }
+       Node temp=head;
+       while(temp!=null){
+           Node prev=temp.prev;
+           temp.prev=temp.next;
+           temp.next=prev;
+       
+           if(temp.prev==null)return temp;
+           temp=temp.prev;
+       }
         
         return head;
+        
     }
 }
